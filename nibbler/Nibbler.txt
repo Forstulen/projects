@@ -1,0 +1,102 @@
+/*			Nibbler				*/
+
+
+Liste des features :
+
+- 3 libs graphiques.
+- 2 cores de jeu (nibbler et demineur).
+- Musique et sons.
+- Nourriture bonus.
+- Nourriture malus qui inverse les touches.
+- La tete et la queue ont une apparence differente.
+  qui ont tous deux une orientation differente.
+- La vitesse augmente en cours de partie.
+- L'aire de jeu peut contenir des obstacles.
+- Un mode sans mur pour revenir de l'autre cote de la grille.
+- Le serpent grandit d'un nombre de cases aleatoires.
+- Un mode hardcore super chaud.
+- Une touche reset.
+- Un boost en appuyant sur espace.
+- Un systeme de scoring avec sauvegarde du best score.
+- Des graphismes a theme a couper le souffle.
+- Des templates, de la stl, du C++ de malade,
+  du style, de la classe, de la puissance,
+  et 3 mecs trop styles !
+
+
+Bonjour et bienvenu a cette soutenance du Nibbler,
+
+Vos hotes aujourd'hui seront allaux_c, benram_s et tholim_r.
+
+Nous vous avons normalement deja presente l'uml du projet.
+
+Passons a la description du projet pour gagner du temps.
+
+Les librairies graphiques choisis sont :
+
+- GTKMM
+- QT
+- SFML
+
+Voici comment jouer au jeu sans option :
+
+      ./nibbler width height lib_nibbler_XXX.so
+      
+      Touches :
+
+	- Echap : quitter le jeu
+	- Haut : aller vers le haut
+	- Bas : aller vers le bas
+	- Droite : aller vers la droite
+	- Gauche : aller vers la gauche
+	- R : remettre a zero
+	- Space : accelerer pendant un cours laps de temps
+
+      Le jeu propose un systeme de score :
+      	
+	- 10 points pour de la nourriture classique
+	- 30 points pour de la nourriture bonus
+	- -50 points pour de la nourriture pourri:
+	      ! Attention ! celle ci inverse vos touches
+	      pendant un certain temps
+	      
+      Le meilleur score est enrengistrer,
+      essayer de le battre !!!
+
+Vous pouvez demmarer le jeu avec des options :
+
+     Options :
+
+     	- v : affiche une description du jeu
+     	- o : genere des obstacles sur la grille.
+	- w : il n'y a pas de mur autour de la grille.
+	- h : mode hardcore -> porte bien son nom.
+	
+	- m : demarre le jeu en mode MineSweeper
+
+/*	      	      MineSweeper			*/
+
+Voila le fameux demineur, dont le but est de trouver les
+
+zones libres.
+
+Voici comment jouer :
+
+      Touches :
+        - haut, bas, droite, gauche : deplacer le curseur.
+	- espace : decouvrir la case
+	- R : remttre a zero
+	- Echap : quitter le jeu
+
+      Le meilleur score est encore une fois enrengistre,
+      ce dernier depend de la taille et de la difficulte
+      du jeu.
+
+Encore une fois, des options sont proposes :
+
+     Options :
+
+       - v : affiche une description du jeu.
+       - o : rien.
+       - w : rien.
+       - h : mode hardcore, genere beaucoup plus de mines.
