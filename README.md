@@ -15,3 +15,8 @@ Nibbler :
 
 Project done during Epitech (IT school)
 It's a video game inspired by the famous Snake on Nokia phones. (Abstract core and graphic library)
+
+AbstractVM :
+
+Project done during Epitech (IT school)
+Create a VM for managing small instructions.
