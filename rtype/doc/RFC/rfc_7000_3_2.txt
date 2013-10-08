@@ -1,0 +1,58 @@
+RFC 7000		    R-Type Protocol      	       July 2011
+
+		  |                                     |
+		  |              Send files             |
+		  | <<-------------------------------<< |
+		  |                                     |
+		  |          Send Acknowledgement       |
+		  | >>------------------------------->> |
+                  |                                     |
+                  |           Send Start Game           |
+                  | >>------------------------------->> |
+                  |                                     |
+                  |         Send Acknowledgement        |
+                  | <<-------------------------------<< |
+
+
+               Figure 1: Initialization of the connection and
+			 prelude of a game.
+
+3.2 In-game
+
+   This section is devoted to describ the actual organization made
+   between the client and the server during the game.
+
+3.2.1 Prelude
+
+   It's in this phase that the clients will receive the informations
+   about the ships they will play with.
+
+3.2.2 Event
+
+   When the clients have received all the informations, they will be
+   able to act in the level in which they are. Let us see what they are
+   allowed to do.
+
+3.2.2.1 Movement
+
+   A player MAY move in the level. He MUST send to the server the
+   direction he took. There is two messages to send. One when he begin
+   to push the button and one when he released this one. He MAY go up,
+   down, left or right. That move is calculated by the server and sent
+   back to all the players in the game.
+
+3.2.2.2 Leave
+
+   A player MAY leave a game when he wants to. He would be a coward in
+   the eyes of his/her friend who played with him of course. He will be
+   redirected out of the room he is in and invited to chose another one
+   room.
+
+
+
+
+
+
+
+
+Benramdhane & Da Silva						[Page 8]

@@ -1,0 +1,43 @@
+On lance le serveur.
+On initialise la base de données.
+On charges tout les masques de collisions.
+On créer les rooms et lance les threads.
+On créer les sockets.
+Dans une room :
+  - Tout le monde est ready.
+  - Envois des fichiers nécessaire.
+On lance une game (Game::Run())
+
+Dans le run de Game
+{
+  Phase de parcours de la map à un instant t.
+  Création des objets et affectation de leur trajectoire/Functor (ces informations viennent de la map).
+  Envois des paquets de création.
+  Appel de la function update des functors des objets.
+  Check des collisions : On prend notre map de collisions complète, on efface ce qu'il y a dedans et on remet tout puis on check.
+}
+
+Phase de connexion :
+********************
+
+Core =>
+  -> initialize(uint port);
+  ->
+
+                                  Core
+                                   ||
+                                  /  \
+                                 /    \
+                                /      \
+                    RoomManagerObs    AuthManager
+                        ||
+                       /  \
+                      /    \
+                     /      \
+                  Room    Room2
+  SelectUDP
+    |
+    |
+  Game
+
+Mettre enum Packet.

@@ -1,0 +1,58 @@
+RFC 7000		    R-Type Protocol      	       July 2011
+
+4.1.3.2 Room
+
+   ROOM is REQUIRED to have at least those sub-types:
+
+   RT_SUB_JOIN (0)
+   RT_SUB_LEAVE (1)
+   RT_SUB_ROOMS (2)
+   RT_SUB_PLAYERS (3)
+   RT_SUB_READY (4)
+   RT_SUB_INFO (5)
+   RT_SUB_START (8)
+   RT_SUB_FILE (9)
+
+4.1.4.3 Game
+
+   GAME is REQUIRED to have at least the following sub-types:
+
+   RT_SUB_EVENT (0)
+   RT_SUB_OBJECT (1)
+   RT_SUB_BULLET (2)
+   RT_SUB_SCORING (3)
+   RT_SUB_GAMEOVER (4)
+   RT_SUB_LEVELOVER (5)
+
+4.2 Connection
+
+   A player who wants to join a server MUST introduce himself by
+   sending in a packet with his nickname (it must respect the BNF).
+
+4.2.1 Client
+
+   Size: Depending on the size of the data
+   Type: RT_TYPE_CONNECTION
+   Transaction Type: RT_TT_REQUEST
+   Sub-Type: RT_SUB_AUTH
+   Data: it will contain the login
+
+           Size	    T   TT    ST                Data
+    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+    | 12(bytes)max| 0 | 0 |   0   |///////////////////////////////|
+    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+
+4.2.3 Server
+
+   Depending on the situation the server can reply one of the
+   following packets.
+
+
+
+
+
+
+
+
+
+Da Silva & Benramdhane					       [page 11]

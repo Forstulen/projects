@@ -1,0 +1,58 @@
+RFC 7000		    R-Type Protocol      	       July 2011
+
+1.  INTRODUCTION
+
+   The RTP (R-Type Protocol) has been designed over a number of years
+   to add an online multiplayer dimension to the game based on a
+   client-server architecture. This document describes the current RTP.
+
+   The RTP has been developed on systems using the TCP/IP and UDP
+   network protocol. In which TCP/IP will be used for all the settings
+   of the game and important packets, as for the UDP to exchange
+   informations in-game.
+
+   R-Type itself is a side scrolling shoot them up arcade game produced
+   1987. The player controls a space fighter to defend humanity against
+   a mysterious but powerful alien life-form known as "Bydo".
+
+1.1 Server
+
+   The server host up to ten rooms where up to four players can join.
+   See the room section for more information.
+
+1.2 Clients
+
+   Each client is distinguished from other clients by a unique
+   nickname having a maximum length of (11) characters. See the protocol
+   grammar rules for what may or may not be used in a nickname.
+
+1.3 Rooms
+
+   The rooms are kind of a lobby in which players can join a game. It
+   MUST allow a maximum of four players. To start a game, everyone in
+   the room MUST set there status to ready (More precision in the
+   chapter 3.1 pre-game).
+
+2.  THE RTP SPECIFICATION
+
+2.1 Overview
+
+   The protocol as described herein is for client to server connections.
+
+2.2 Packet
+
+2.2.1 Header
+
+   The header MUST be the first two bytes of each packet send to the
+   server. To be valid the RTP packet header is REQUIRED to be as
+   described below and each number representing a bit:
+
+
+
+
+
+
+
+
+
+Da Silva & Benramdhane					       [page 4]

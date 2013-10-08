@@ -1,0 +1,58 @@
+RFC 7000		    R-Type Protocol      	       July 2011
+
+4.2.3.1 Success
+
+   Size: 0
+   Type: RT_TYPE_CONNECTION
+   Transaction Type: RT_TT_ACK
+   Sub-Type: RT_SUB_AUTH
+   Data: none
+
+           Size	      T   TT    ST                Data
+    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+    |       0       | 0 | 2 |   0   |				  |
+    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+
+4.2.3.1 Error
+
+   Size: Depending on the size of the data
+   Type: RT_TYPE_CONNECTION
+   Transaction Type: RT_TT_ERROR
+   Sub-Type: RT_SUB_AUTH
+   Data: it will contain one of the following errors:
+   'The login you sent is not in the good format.'
+
+           Size	    T   TT    ST                Data
+    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+    |254(bytes)max| 0 | 3 |   0   |///////////////////////////////|
+    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+
+4.3 Room operations
+
+   A player is able to do some actions within the rooms. Here are
+   the details of them.
+
+4.3.1 Disconnection
+
+    A player who wants to leave the server MUST notify him by sending in
+    a packet with his nickname.
+
+4.3.1.1 Client
+
+    Size: 0
+    Type: RT_TYPE_ROOM
+    Transaction Type: RT_TT_REQUEST
+    Sub-Type : RT_SUB_DISC
+    Data: none
+
+        Size	    T   TT    ST                Data
+    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+    |      0      | 0 | 0 |   9   |                               |
+    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+
+4.3.2 Join
+
+   This is what a player MUST send to join a room.
+
+
+Da Silva & Benramdhane					       [page 12]

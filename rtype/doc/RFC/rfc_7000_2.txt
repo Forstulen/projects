@@ -1,0 +1,58 @@
+RFC 7000		    R-Type Protocol      	       July 2011
+
+   0               1               2               3
+   0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7
+   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+   |      Size     | T | TT|  ST   |             Data            |
+   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+   |			          Data                           |
+   =-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-//+-+-+-+-+-+-+-+-+-+-+-+-+-+-=
+   |				  Data      		         |
+   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-//+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+
+		    Figure 1: Format Size of a Packet
+
+   Size: it is the packet size including the data (8 bits).
+   T: the type define what kind of packet it is (2 bits).
+   TT: with this you can set the type of transaction of the packet
+   (2 bits).
+   ST: it is the sub type of the packet (4 bits).
+   Data: here is all the data you want to send to the server
+   (254 * 8 bits).
+
+2.2.2 Data
+
+   The data contains all the informations the sender want to transmit
+   to the receiver. It MUST have at the maximum 254 bytes.
+
+3.  RTP CONCEPT
+
+   The RTP is composed by two parts: a pre-game one and an in-game one.
+   We are going to introduce these two parts to see the concept used in
+   it. We will not introduce the packet contents but only the concept of
+   the several steps.
+
+3.1 Pre-game
+
+   The pre-game can be splitted in three parts. All the communication
+   will be done using TCP/IP protocol.
+
+3.1.1 Connection
+
+   First, the player MUST connect his client to the server. He is
+   REQUIRED to use the server's IP and port. He will be able to join the
+   server only if he specifies a valid login (11 characters).
+
+   <login> ::= [ a-z | A-Z | _ ][ a-z | A-Z | _ | 0-9]*
+
+   If the login choosen by the player exists, the server will asks him
+   to choose another login. If it doesn't respect the BNF of the login
+   the server will notify the client about the wrong login.
+
+3.1.2 Disconnection
+
+   The client disconnect himself from the server by notifying it.
+
+
+
+Benramdhane & Da Silva						[Page 5]

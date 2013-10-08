@@ -1,0 +1,385 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="cf454784-f9e7-44f1-9833-2784e78b4c92"
+  name="RTypeClient" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
+      <profileInstance
+        Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791"
+        name="StandardProfileL2" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="29349502-908c-4fda-9054-c48619c59ed0">
+      <profileInstance
+        Id="532ea607-fb19-44b8-8502-3351b05452be"
+        name="StandardProfileL3" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="16e89728-3104-4f9e-86ea-28cd5082e868"
+        LastKnownName="Menu"
+        LastKnownLocation="Package_1512.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="b6a25d4a-1fa6-4e60-8c03-6f1df44179dd"
+        name="Core"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="d37e8061-0058-499b-933d-261d5daed3e3"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="81bda29b-1a7b-4261-be5c-515948bc3ee6"
+        name="AbstractMenu"
+        isAbstract="false"
+        isLeaf="false">
+        <ownedAttributes>
+          <property
+            Id="40c24777-4a09-4924-95ba-4e561a993248"
+            name="_widgetList"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="da28081d-0b76-48f5-999c-a286dc00afa9"
+                LastKnownName="std::list&lt;IWidget&gt;"
+                LastKnownLocation="RTypeClient.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="2e5d479a-e208-4a40-a5dd-a8c1507d88fb"
+            name="Attribute1"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributes>
+        <ownedOperations>
+          <operation
+            Id="47056c90-63c4-4cd3-a391-f22c5b254532"
+            name="AddWidget"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="c9ef959c-8542-4c46-9f3a-e6a1225a20d5"
+                  name="widget"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="a2386396-5a42-4a48-8088-65d5b70892b9"
+                      LastKnownName="IWidget"
+                      LastKnownLocation="RTypeClient.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="43533905-61a3-46bf-b869-6f5994e9795f"
+                  direction="Return">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="1c46cd04-7045-4e70-821b-c11edd5e9aa4"
+                      LastKnownName="bool"
+                      LastKnownLocation="RTypeClient.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="7d047411-9cb9-4bec-bac3-77be8ee2c2b4"
+                  name="position"
+                  direction="In">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="fbd1f50f-669b-44e8-b25b-1ae486958894"
+                      LastKnownName="struct position"
+                      LastKnownLocation="RTypeClient.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="b07b1ee9-84a7-453d-b23a-98e184db8b43"
+                  name="scale"
+                  direction="In">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="05bd1d4d-f1ea-44e2-889e-5fdd25936298"
+                      LastKnownName="int"
+                      LastKnownLocation="RTypeClient.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="061569a1-8b03-412b-9738-62657e7f19b9"
+            name="RemoveWidget"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="83dd7d5d-e62f-47a8-83ba-d20483545aed"
+                  name="widget"
+                  direction="In">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="a2386396-5a42-4a48-8088-65d5b70892b9"
+                      LastKnownName="IWidget"
+                      LastKnownLocation="RTypeClient.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="1c46cd04-7045-4e70-821b-c11edd5e9aa4"
+        name="bool" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="fbd1f50f-669b-44e8-b25b-1ae486958894"
+        name="struct position" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="05bd1d4d-f1ea-44e2-889e-5fdd25936298"
+        name="int" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="a2386396-5a42-4a48-8088-65d5b70892b9"
+        name="IWidget" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="431e98da-ed46-44ab-a7d9-0660307861c9"
+        name="st" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="2846d3a8-ff91-41d5-90ea-119ac383a346"
+        name="std:list&lt;IWidget&gt;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="70d073ab-8a8e-4779-a761-17b4aaab1f48"
+        name="sf:Sprite" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="5808cde2-1faf-4f47-aab0-c929bb4ff31d"
+        name="sf::Image" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="a4170164-87d9-4f36-a6c2-d7d0eda536c4"
+        name="void (*func)()" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="da28081d-0b76-48f5-999c-a286dc00afa9"
+        name="std::list&lt;IWidget&gt;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="0f33b5bc-04bb-4dbd-9fa8-43d71bf9bf12"
+        name="sf::Sprite" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="dc23d309-5902-49f5-9512-a6a670906d33"
+        name="void (*function)()" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="ddd9f03b-97ec-4a56-a657-1f93866938aa"
+        name="T::(*func)" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="7932de20-1913-4bb6-8f05-67856966df03"
+        name="IWidget " />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="7b7f5b01-6a46-4d34-8181-7a25c5bbb308"
+        name="Class1"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="effb54f5-4661-48a6-a048-69894590e84e"
+        name="BabalUML::Network::ISocketClient" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="2868d347-7f0d-41cb-b8a4-798998c1ef09"
+        name="Client *" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="ac39a19c-4b54-40a7-ab63-d8dc46f81d86"
+        name="Server_UML::Network::status" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="9419080f-a4fd-466b-95de-5373f456df9c"
+        name="Message::BabelMsg *" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="b07ec71c-2f20-46d4-aa66-f4b664770307"
+        name="char[2]" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="7558bf8b-ad61-4bdf-aa7a-c3abb1e280a6"
+        name="char[126]" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="aaca8c25-e6f2-4605-b662-dec0a16c0db0"
+        name="SOCKET" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="5590e4b2-5d7c-4d08-b82a-37c07a41f807"
+        name="ISocketServer*" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="1ac23018-8ae8-426e-a21f-0db618be5e9a"
+        name="Select" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="10315537-e45a-4cf9-963f-87b311227160"
+        name="connectionList" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="9db9f1c9-ad4b-4289-8442-cc98d88d2de3"
+        name="connectionlist" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="395058de-b3c3-4b38-ac5b-ebfa7e60a76f"
+        name="fd_set" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="859c9095-cd5d-4a1e-b542-a01027abf564"
+        name="connectFuncTab_" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="730e7165-fed3-48b5-8250-42f86ba8d5ff"
+        name="ISocketClient*" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="9a10caa0-efda-4711-a120-db6cf4b4b2f9"
+        name="SocketToAccept" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="2f1be7a3-d899-4a6d-b1fb-b6083cd5f888"
+        name="Client const *" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="1c6b572b-f100-43d0-9477-9ffd01cba7c3"
+        name="Connection &amp;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="b2e135f6-2741-4b5e-8316-d469e7c729e4"
+        name="status const &amp;(" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="ad13913c-0ec5-4e5e-a499-cff2fe62c428"
+        name="String const &amp;(" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="0025d918-66fe-436c-8a38-8c09d0849f80"
+        name="Message::BabelMsg &amp;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="9d010ae2-72df-4c56-b023-ed570cb707a9"
+        LastKnownName="Network"
+        LastKnownLocation="Package_1913.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="179b2f13-563b-4237-be25-4f9382223cad"
+        LastKnownName="Network1"
+        LastKnownLocation="Package_1914.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="52b45c22-7487-408f-83db-d47927f444ce"
+        LastKnownName="App"
+        LastKnownLocation="Package_2253.uml" />
+    </packageHasNamedElement>
+  </packagedElements>
+  <primitiveType
+    Id="220a3521-e091-4221-bae9-3ef9018e845c"
+    name="Integer"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+    name="Boolean"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+    name="String"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="3ab42e7d-4969-445a-b209-471f5cb8209c"
+    name="UnlimitedNatural"
+    isAbstract="false"
+    isLeaf="false" />
+</modelStoreModel>

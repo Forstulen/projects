@@ -1,0 +1,58 @@
+RFC 7000		    R-Type Protocol      	       July 2011
+
+4.3.5.2.1 Success
+
+   Size: Depending on the size of the data
+   Type: RT_TYPE_ROOM
+   Transaction Type: RT_TT_REPLY
+   Sub-Type: RT_SUB_PLAYERS
+   Data: it will contain the list of the players login. The format is a
+   string in which each player’s login(11 bytes max) will be separated
+   by the character ‘\0’.
+
+          Size        T   TT    ST              Data
+    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+    | 48(bytes)max | 1 | 1 |   3   |//////////////////////////////|
+    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+
+4.3.5.2.1 Error
+
+   Size: Depending on the size of the data
+   Type: RT_TYPE_ROOM
+   Transaction Type: RT_TT_ERROR
+   Sub-Type: RT_SUB_PLAYER
+   Data: this data will contain one of the following errors:
+   'This room doesn't exists.'
+
+           Size	      T  TT    ST                Data
+    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+    | 254(bytes)max | 1 | 3 |   3   |/////////////////////////////|
+    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+
+4.3.6 Ready
+
+   When a player is ready to play he MUST send the following.
+
+4.3.6.1 Client
+
+   Size: 0
+   Type: RT_TYPE_ROOM
+   Transaction Type: RT_TT_REQUEST
+   Sub-Type: RT_SUB_READY
+   Data: none
+
+           Size       T   TT    ST              Data
+    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+    |        0      | 1 | 0 |   4   |                             |
+    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+
+
+4.3.6.2 Server
+
+   Depending on the situation the server can reply one of the
+   following packets.
+
+
+
+
+Da Silva & Benramdhane					       [page 16]

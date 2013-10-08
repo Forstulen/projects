@@ -1,0 +1,414 @@
+[Libraries](name)
+MonsterObject1 & MonsterObject2 & MonsterObject3 & MonsterObject4 & MonsterObject5 & MonsterObject6 & BulletObject1 & BulletObject2 & WallObject1 & PlayerObject1 &  ExplosionObject1 & BulletMonsterObject1 & MonsterPowerUpSpeed & MonsterPowerUpBeam2 & PowerUpObjectBeam2 & PowerUpObjectSpeed
+
+[Folders] (nameFolder & typeFolder)
+../../resource/sprites/ & Images
+../../resource/Libraries/ & Libraries
+../../resource/sounds/ & Sounds
+
+[Images] (nameImage & nameSprite & topLeftX & topLeftY & bottomRightX & BottomRightY & width & height & animType & startIndex)
+	rtype_001 & backgroundConnection & 0 & 0 & 800 & 600 & 800 & 600 & 2 & 0
+	planet	&	backgroundRoomList & 0 & 0 & 800 & 480 & 800 & 480 & 2 & 0
+	backgroundGameover	&	backgroundGameover	& 0 & 0 & 800 & 480 & 800 & 480 & 2 & 0
+	r-typesheet43 & bulletmonster & 130 & 3 & 270 & 14 & 17 & 10 & 1 & 0
+	r-typesheet44 & basicexplosion & 126 & 2 & 326 & 33 & 33 & 31 & 1 & 0
+	r-typesheet44 & monster1explosion & 126 & 2 & 326 & 33 & 33 & 31 & 1 & 0
+	r-typesheet44 & monsterpowerupexplosion & 126 & 2 & 326 & 33 & 33 & 31 & 1 & 0
+	r-typesheet44 & monster2explosion & 126 & 2 & 326 & 33 & 33 & 31 & 1 & 0
+	r-typesheet44 & monster3explosion & 66 & 39 & 325 & 90 & 64 & 50 & 1 & 0
+	r-typesheet44 & monster4explosion & 126 & 2 & 326 & 33 & 33 & 31 & 1 & 0
+	r-typesheet44 & monster5explosion & 126 & 2 & 326 & 33 & 33 & 31 & 1 & 0
+	r-typesheet44 & monster6explosion & 126 & 2 & 326 & 33 & 33 & 31 & 1 & 0
+	fire1 & blueshipexplosion & 0 & 342 & 266 & 371 & 33 & 29 & 1 & 0
+	fire1 & greenshipexplosion & 0 & 342 & 266 & 371 & 33 & 29 & 1 & 0
+	fire1 & redshipexplosion & 0 & 342 & 266 & 371 & 33 & 29 & 1 & 0
+	fire1 & yellowshipexplosion & 0 & 342 & 266 & 371 & 33 & 29 & 1 & 0
+
+	cursor  & cursor  & 0	& 0 & 124 & 28 & 31 & 28 & 0 & 0
+	blueship & blueship & 0 & 0 & 157 & 14 & 31 & 14 & 2 & 2
+	redship & redship & 0 & 0 & 157 & 14 & 31 & 14 & 2 & 2
+	yellowship & yellowship & 0 & 0 & 157 & 14 & 31 & 14 & 2 & 2
+	greenship & greenship & 0 & 0 & 157 & 14 & 31 & 14 & 2 & 2
+	monster1 & monster1 & 0	 & 0 &	315 & 24 & 21 & 24 & 0 & 7
+	monster2 & monster2 & 0 & 0 & 265 & 67 & 33 & 33 & 0 & 15
+	monster3 & monster3 & 0	 & 0 & 191 & 32 & 32 & 32 & 0 & 2
+	monster4 & monster4 & 0	 & 0 & 120 & 32 & 30 & 32 & 0 & 3
+	monster5 & monster5 & 0	 & 0 & 191 & 30 & 32 & 20 & 0 & 2
+	monster6 & monster6 & 0	 & 0 & 103 & 18 & 18 & 18 & 1 & 0
+
+	monsterpowerup & monsterpowerup & 0 & 0 & 28 & 25 & 28 & 25 & 0 & 0
+
+	powerupblue & powerupblue & 0 & 0 & 80 & 18 & 20 & 18 & 1 & 0
+	powerupspeed & powerupspeed & 0 & 0 & 96 & 20 & 24 & 20 & 1 & 0
+	fire1	 & charge & 0 & 50 & 266 & 80 & 33 & 30 & 0 & 0
+	fire1	 & BulletObject1superiorfire0 & 215 & 85 & 262 & 96 & 15 & 10 & 2 & 0
+	fire1	 & BulletObject1superiorfire1 & 232 & 103 & 265 & 114 & 16 & 10 & 2 & 0
+	fire1	 & BulletObject1superiorfire2 & 200 & 121 & 264 & 131 & 32 & 10 & 2 & 0
+	fire1	 & BulletObject1superiorfire3 & 168 & 138 & 264 & 148 & 48 & 10 & 2 & 0
+	fire1	 & BulletObject1superiorfire4 & 136 & 154 & 264 & 167 & 64 & 13 & 2 & 0
+	fire1	 & BulletObject1superiorfire5 & 104 & 172 & 265 & 185 & 80 & 13 & 2 & 0
+	fire2	 & BulletObject2superiorfire0 & 39 & 674 & 298 & 730 & 66 & 56 & 0 & 0
+	fire2	 & BulletObject2superiorfire0 & 36 & 470 & 300 & 502 & 66 & 32 & 0 & 0
+	fire2	 & BulletObject2superiorfire0 & 36 & 470 & 300 & 502 & 66 & 32 & 0 & 0
+	fire2	 & BulletObject2superiorfire0 & 36 & 470 & 300 & 502 & 66 & 32 & 0 & 0
+	fire2	 & BulletObject2superiorfire0 & 36 & 470 & 300 & 502 & 66 & 32 & 0 & 0
+	fire2	 & BulletObject2superiorfire0 & 36 & 470 & 300 & 502 & 66 & 32 & 0 & 0
+	fire2	 & BulletObject2superiorfire0 & 36 & 470 & 300 & 502 & 66 & 32 & 0 & 0
+	fire2	 & BulletObject2superiorfire0 & 36 & 470 & 300 & 502 & 66 & 32 & 0 & 0
+	fire1	 & BulletObject2superiorfire1 & 232 & 103 & 265 & 114 & 16 & 10 & 2 & 0
+	fire1	 & BulletObject2superiorfire2 & 200 & 121 & 264 & 131 & 32 & 10 & 2 & 0
+	fire1	 & BulletObject2superiorfire3 & 168 & 138 & 264 & 148 & 48 & 10 & 2 & 0
+	fire1	 & BulletObject2superiorfire4 & 136 & 154 & 264 & 167 & 64 & 13 & 2 & 0
+	fire1	 & BulletObject2superiorfire5 & 104 & 172 & 265 & 185 & 80 & 13 & 2 & 0
+	
+	block	& wall1 & 0 & 0 & 64  & 16  & 64 & 16 & 0 & 0
+	block2	& wall2 & 0 & 0 & 64  & 16  & 64 & 16 & 0 & 0
+	block3	& wall3 & 0 & 0 & 64  & 16  & 64 & 16 & 0 & 0
+	
+	blocka1	& walla1 & 0 & 0 & 64  & 16  & 64 & 16 & 0 & 0
+	blocka2	& walla2 & 0 & 0 & 64  & 16  & 64 & 16 & 0 & 0
+	blocka3	& walla3 & 0 & 0 & 64  & 16  & 64 & 16 & 0 & 0
+	
+	blockb1	& wallb1 & 0 & 0 & 64  & 16  & 64 & 16 & 0 & 0
+	blockb2	& wallb2 & 0 & 0 & 64  & 16  & 64 & 16 & 0 & 0
+	
+	blockca1	& wallca1 & 0 & 0 & 64  & 16  & 64 & 16 & 0 & 0
+	blockca2	& wallca2 & 0 & 0 & 64  & 16  & 64 & 16 & 0 & 0
+	blockca3	& wallca3 & 0 & 0 & 64  & 16  & 64 & 16 & 0 & 0
+	blockca4	& wallca4 & 0 & 0 & 64  & 16  & 64 & 16 & 0 & 0
+	blockca5	& wallca5 & 0 & 0 & 64  & 16  & 64 & 16 & 0 & 0
+	blockca6	& wallca6 & 0 & 0 & 64  & 16  & 64 & 16 & 0 & 0
+	blockcb2	& wallcb2 & 0 & 0 & 64  & 16  & 64 & 16 & 0 & 0
+	blockcb3	& wallcb3 & 0 & 0 & 64  & 16  & 64 & 16 & 0 & 0
+	blockcb4	& wallcb4 & 0 & 0 & 64  & 16  & 64 & 16 & 0 & 0
+	blockcb5	& wallcb5 & 0 & 0 & 64  & 16  & 64 & 16 & 0 & 0
+	blockcb6	& wallcb6 & 0 & 0 & 64  & 16  & 64 & 16 & 0 & 0
+	
+	blockda1	& wallda1 & 0 & 0 & 64  & 16  & 64 & 16 & 0 & 0
+	blockda2	& wallda2 & 0 & 0 & 64  & 16  & 64 & 16 & 0 & 0
+	blockda3	& wallda3 & 0 & 0 & 64  & 16  & 64 & 16 & 0 & 0
+	blockda4	& wallda4 & 0 & 0 & 64  & 16  & 64 & 16 & 0 & 0
+	blockda5	& wallda5 & 0 & 0 & 64  & 16  & 64 & 16 & 0 & 0
+	blockda6	& wallda6 & 0 & 0 & 64  & 16  & 64 & 16 & 0 & 0
+	blockdb1	& walldb1 & 0 & 0 & 64  & 16  & 64 & 16 & 0 & 0
+	blockdb2	& walldb2 & 0 & 0 & 64  & 16  & 64 & 16 & 0 & 0
+	blockdb3	& walldb3 & 0 & 0 & 64  & 16  & 64 & 16 & 0 & 0
+	blockdb4	& walldb4 & 0 & 0 & 64  & 16  & 64 & 16 & 0 & 0
+	blockdb5	& walldb5 & 0 & 0 & 64  & 16  & 64 & 16 & 0 & 0
+	blockdb6	& walldb6 & 0 & 0 & 64  & 16  & 64 & 16 & 0 & 0
+	blockdc1	& walldc1 & 0 & 0 & 64  & 16  & 64 & 16 & 0 & 0
+	blockdc2	& walldc2 & 0 & 0 & 64  & 16  & 64 & 16 & 0 & 0
+	blockdc3	& walldc3 & 0 & 0 & 64  & 16  & 64 & 16 & 0 & 0
+	blockdc4	& walldc4 & 0 & 0 & 64  & 16  & 64 & 16 & 0 & 0
+	blockdc5	& walldc5 & 0 & 0 & 64  & 16  & 64 & 16 & 0 & 0
+	blockdc6	& walldc6 & 0 & 0 & 64  & 16  & 64 & 16 & 0 & 0
+
+	block-2		& walle1 & 0 & 0 & 64  & 16  & 64 & 16 & 0 & 0
+	blocka1-2 	& walle2 & 0 & 0 & 64  & 16  & 64 & 16 & 0 & 0
+	blocka2-2 	& walle3 & 0 & 0 & 64  & 16  & 64 & 16 & 0 & 0
+	blockb1-2	& walle4 & 0 & 0 & 64  & 16  & 64 & 16 & 0 & 0
+	blockb2-2	& walle5 & 0 & 0 & 64  & 16  & 64 & 16 & 0 & 0
+	blockb3-2	& walle6 & 0 & 0 & 64  & 16  & 64 & 16 & 0 & 0
+	blockc1-2	& walle7 & 0 & 0 & 64  & 16  & 64 & 16 & 0 & 0
+	blockc2-2	& walle8 & 0 & 0 & 64  & 16  & 64 & 16 & 0 & 0
+
+	blocke1       	& wallf1  & 0 & 0 & 64  & 16  & 64 & 16 & 0 & 0
+	blocke2       	& wallf2  & 0 & 0 & 64  & 16  & 64 & 16 & 0 & 0
+	blocke3       	& wallf3  & 0 & 0 & 64  & 16  & 64 & 16 & 0 & 0
+	blockf1       	& wallf4  & 0 & 0 & 64  & 16  & 64 & 16 & 0 & 0
+	blockf2       	& wallf5  & 0 & 0 & 64  & 16  & 64 & 16 & 0 & 0
+	blockf3       	& wallf6  & 0 & 0 & 64  & 16  & 64 & 16 & 0 & 0
+	blocke1r       	& wallf7  & 0 & 0 & 64  & 16  & 64 & 16 & 0 & 0
+	blocke2r       	& wallf8  & 0 & 0 & 64  & 16  & 64 & 16 & 0 & 0
+	blocke3r      	& wallf9  & 0 & 0 & 64  & 16  & 64 & 16 & 0 & 0
+	blockf1r       	& wallf10 & 0 & 0 & 64  & 16  & 64 & 16 & 0 & 0
+	blockf2r       	& wallf11 & 0 & 0 & 64  & 16  & 64 & 16 & 0 & 0
+	blockf3r       	& wallf12 & 0 & 0 & 64  & 16  & 64 & 16 & 0 & 0
+
+
+	block3r		& wallr1 & 0 & 0 & 64  & 16  & 64 & 16 & 0 & 0
+	blocka1r	& wallr2 & 0 & 0 & 64  & 16  & 64 & 16 & 0 & 0
+	blocka2r	& wallr3 & 0 & 0 & 64  & 16  & 64 & 16 & 0 & 0
+	blocka3r	& wallr4 & 0 & 0 & 64  & 16  & 64 & 16 & 0 & 0
+	blockb1r	& wallr5 & 0 & 0 & 64  & 16  & 64 & 16 & 0 & 0
+	blockb2r	& wallr6 & 0 & 0 & 64  & 16  & 64 & 16 & 0 & 0
+	blockca1r	& wallr7 & 0 & 0 & 64  & 16  & 64 & 16 & 0 & 0
+	blockca2r	& wallr8 & 0 & 0 & 64  & 16  & 64 & 16 & 0 & 0
+	blockca3r	& wallr9 & 0 & 0 & 64  & 16  & 64 & 16 & 0 & 0
+	blockca4r	& wallr10 & 0 & 0 & 64  & 16  & 64 & 16 & 0 & 0
+	blockca5r	& wallr11 & 0 & 0 & 64  & 16  & 64 & 16 & 0 & 0
+	blockca6r	& wallr12 & 0 & 0 & 64  & 16  & 64 & 16 & 0 & 0
+	blockcb1r	& wallr13 & 0 & 0 & 64  & 16  & 64 & 16 & 0 & 0
+	blockcb2r	& wallr14 & 0 & 0 & 64  & 16  & 64 & 16 & 0 & 0
+	blockcb3r	& wallr15 & 0 & 0 & 64  & 16  & 64 & 16 & 0 & 0
+	blockcb4r	& wallr16 & 0 & 0 & 64  & 16  & 64 & 16 & 0 & 0
+	blockcb5r	& wallr17 & 0 & 0 & 64  & 16  & 64 & 16 & 0 & 0
+	blockcb6r	& wallr18 & 0 & 0 & 64  & 16  & 64 & 16 & 0 & 0
+	blockda1r	& wallr19 & 0 & 0 & 64  & 16  & 64 & 16 & 0 & 0
+	blockda2r	& wallr20 & 0 & 0 & 64  & 16  & 64 & 16 & 0 & 0
+	blockda3r	& wallr21 & 0 & 0 & 64  & 16  & 64 & 16 & 0 & 0
+	blockda4r	& wallr22 & 0 & 0 & 64  & 16  & 64 & 16 & 0 & 0
+	blockda5r	& wallr23 & 0 & 0 & 64  & 16  & 64 & 16 & 0 & 0
+	blockda6r	& wallr24 & 0 & 0 & 64  & 16  & 64 & 16 & 0 & 0
+	blockdb1r	& wallr25 & 0 & 0 & 64  & 16  & 64 & 16 & 0 & 0
+	blockdb2r	& wallr26 & 0 & 0 & 64  & 16  & 64 & 16 & 0 & 0
+	blockdb3r	& wallr27 & 0 & 0 & 64  & 16  & 64 & 16 & 0 & 0
+	blockdb4r	& wallr28 & 0 & 0 & 64  & 16  & 64 & 16 & 0 & 0
+	blockdb5r	& wallr29 & 0 & 0 & 64  & 16  & 64 & 16 & 0 & 0
+	blockdb6r	& wallr30 & 0 & 0 & 64  & 16  & 64 & 16 & 0 & 0
+	blockdc1r	& wallr31 & 0 & 0 & 64  & 16  & 64 & 16 & 0 & 0
+	blockdc2r	& wallr32 & 0 & 0 & 64  & 16  & 64 & 16 & 0 & 0
+	blockdc3r	& wallr33 & 0 & 0 & 64  & 16  & 64 & 16 & 0 & 0
+	blockdc4r	& wallr34 & 0 & 0 & 64  & 16  & 64 & 16 & 0 & 0
+	blockdc5r	& wallr35 & 0 & 0 & 64  & 16  & 64 & 16 & 0 & 0
+	blockdc6r	& wallr36 & 0 & 0 & 64  & 16  & 64 & 16 & 0 & 0
+	blockr		& wallr37 & 0 & 0 & 64  & 16  & 64 & 16 & 0 & 0
+
+	beam	& hudpart1 & 0 & 0 & 220 & 40 & 220 & 40 & 0 & 0
+
+	scorep1 & scorep1 & 0 & 0 & 151 & 41 & 151 & 41 & 0 & 0
+	scorep2 & scorep2 & 0 & 0 & 151 & 41 & 151 & 41 & 0 & 0
+	scorep3 & scorep3 & 0 & 0 & 151 & 41 & 151 & 41 & 0 & 0
+	scorep4 & scorep4 & 0 & 0 & 151 & 41 & 151 & 41 & 0 & 0
+
+	nyan	& nyan & 10 & 104 & 175 & 120 & 28 & 16 & 0 & 0
+
+[Map] (idMap & nameSprite)
+1	&	wall1
+2	&	wall2
+3	&	wall3
+4	& 	walla1
+5	& 	walla2
+6	& 	walla3
+7	& 	wallb1
+8	& 	wallb2
+9	& 	wallca1
+10 	&	wallca2
+11	&	wallca3
+12	&	wallca4
+13	&	wallca5
+14	& 	wallca6
+16	& 	wallcb2
+17	& 	wallcb3
+18	& 	wallcb4
+19	& 	wallcb5
+20	& 	wallcb6
+21	& 	wallda1
+22	& 	wallda2
+23	& 	wallda3
+24	& 	wallda4
+25	& 	wallda5
+26	& 	wallda6
+27	& 	walldb1
+28	& 	walldb2
+29	& 	walldb3
+30	& 	walldb4
+31	& 	walldb5
+32	& 	walldb6
+33	& 	walldc1
+34	& 	walldc2
+35	& 	walldc3
+36	& 	walldc4
+37	& 	walldc5
+38	& 	walldc6
+39	&	walle1
+40	&	walle2
+41	&	walle3
+42	&	walle4
+43	&	walle5
+44	&	walle6
+45	&	walle7
+46	&	walle8
+47      & 	wallf1
+48      & 	wallf2
+49      & 	wallf3
+50      & 	wallf4
+51      & 	wallf5
+52      & 	wallf6
+53      & 	wallf7
+54      & 	wallf8
+55      & 	wallf9
+56      & 	wallf10
+57      & 	wallf11
+58      & 	wallf12
+59	& 	wallr1
+60	&	wallr2
+61	&	wallr3
+62	&	wallr4
+63	&	wallr5
+64	& 	wallr6
+65	& 	wallr7
+66	&	wallr8
+67	& 	wallr9
+68	&	wallr10
+69	&	wallr11
+70	& 	wallr12
+71	& 	wallr13
+72	& 	wallr14
+73	&	wallr15
+74	& 	wallr16
+75	& 	wallr17
+76	& 	wallr18
+77	& 	wallr19
+78	& 	wallr20
+79	& 	wallr21
+80	& 	wallr22
+81	& 	wallr23
+82	& 	wallr24
+83	& 	wallr25
+84	& 	wallr26
+85	& 	wallr27
+86	& 	wallr28
+87	& 	wallr29
+88	& 	wallr30
+89	& 	wallr31
+90	& 	wallr32
+91	& 	wallr33
+92	& 	wallr34
+93	& 	wallr35
+94	& 	wallr36
+95	& 	wallr37
+
+
+[Level1] (nameSprite & popTime & posX & posY & direction & speed)
+MonsterPowerUpSpeed& 30.0 & 800 & 370 & 1 & 5.0
+MonsterPowerUpBeam2& 1.0 & 800 & 25 & 1 & 5.0
+
+MonsterObject3 & 0.5 & 650 & 340 & 1 & 5.0
+MonsterObject3 & 1.0 & 750 & 340 & 1 & 5.0
+MonsterObject3 & 1.5 & 800 & 340 & 1 & 5.0
+
+MonsterObject1 & 1.0 & 800 & 240 & 1 & 5.0
+MonsterObject1 & 3.0 & 800 & 300 & 1 & 5.0
+MonsterObject1 & 4.0 & 800 & 120 & 1 & 5.0
+MonsterObject1 & 6.0 & 800 & 225 & 1 & 5.0
+MonsterObject1 & 6.5 & 800 & 350 & 1 & 5.0
+MonsterObject1 & 7.0 & 800 & 125 & 1 & 5.0
+MonsterObject1 & 7.0 & 800 & 300 & 1 & 5.0
+MonsterObject1 & 7.5 & 800 & 90 & 1 & 5.0
+MonsterObject1 & 8.5 & 800 & 100 & 1 & 5.0
+MonsterObject1 & 8.5 & 800 & 164 & 1 & 5.0
+
+MonsterObject4 & 13.0 & 800 & 215 & 1 & 5.0
+MonsterObject6 & 1.0 & 800 & 370 & 1 & 5.0
+MonsterObject6 & 1.0 & 800 & 370 & 1 & 5.0
+MonsterObject6 & 1.0 & 800 & 370 & 1 & 5.0
+MonsterObject5 & 1.0 & 800 & 370 & 1 & 5.0
+
+MonsterObject1 & 15.0 & 800 & 30 & 1 & 5.0
+MonsterObject1 & 15.0 & 800 & 80 & 1 & 5.0
+MonsterObject1 & 15.0 & 800 & 130 & 1 & 5.0
+MonsterObject1 & 15.0 & 800 & 180 & 1 & 5.0
+MonsterObject1 & 15.0 & 800 & 230 & 1 & 5.0
+MonsterObject1 & 15.0 & 800 & 280 & 1 & 5.0
+MonsterObject1 & 15.0 & 800 & 330 & 1 & 5.0
+
+MonsterObject1 & 20.0 & 800 & 30 & 1 & 5.0
+MonsterObject1 & 20.0 & 800 & 80 & 1 & 5.0
+MonsterObject1 & 20.0 & 800 & 130 & 1 & 5.0
+MonsterObject1 & 20.0 & 800 & 180 & 1 & 5.0
+MonsterObject1 & 20.0 & 800 & 230 & 1 & 5.0
+MonsterObject1 & 20.0 & 800 & 280 & 1 & 5.0
+MonsterObject1 & 20.0 & 800 & 330 & 1 & 5.0
+
+MonsterObject1 & 26.0 & 800 & 30 & 1 & 5.0
+MonsterObject1 & 26.5 & 800 & 280 & 1 & 5.0
+MonsterObject1 & 27.0 & 800 & 230 & 1 & 5.0
+MonsterObject1 & 27.5 & 800 & 180 & 1 & 5.0
+MonsterObject1 & 28.0 & 800 & 130 & 1 & 5.0
+MonsterObject1 & 28.5 & 800 & 80 & 1 & 5.0
+MonsterObject1 & 29.0 & 800 & 330 & 1 & 5.0
+
+MonsterObject3 & 33.0 & 650 & 370 & 1 & 5.0
+MonsterObject3 & 34.0 & 750 & 370 & 1 & 5.0
+MonsterObject3 & 35.0 & 800 & 370 & 1 & 5.0
+
+MonsterObject3 & 42.0 & 800 & 370 & 1 & 5.0
+MonsterObject3 & 43.0 & 800 & 370 & 1 & 5.0
+MonsterObject3 & 44.0 & 800 & 370 & 1 & 5.0
+MonsterObject3 & 45.0 & 800 & 370 & 1 & 5.0
+MonsterObject3 & 46.0 & 800 & 370 & 1 & 5.0
+MonsterObject3 & 47.0 & 800 & 370 & 1 & 5.0
+
+MonsterObject1 & 46.0 & 800 & 30 & 1 & 5.0
+MonsterObject1 & 46.0 & 800 & 80 & 1 & 5.0
+MonsterObject1 & 46.0 & 800 & 130 & 1 & 5.0
+MonsterObject1 & 46.0 & 800 & 180 & 1 & 5.0
+MonsterObject1 & 46.0 & 800 & 230 & 1 & 5.0
+MonsterObject1 & 46.0 & 800 & 280 & 1 & 5.0
+MonsterObject1 & 46.0 & 800 & 330 & 1 & 5.0
+
+MonsterObject1 & 50.0 & 800 & 30 & 1 & 5.0
+MonsterObject1 & 50.0 & 800 & 80 & 1 & 5.0
+MonsterObject1 & 50.0 & 800 & 130 & 1 & 5.0
+MonsterObject1 & 50.0 & 800 & 180 & 1 & 5.0
+MonsterObject1 & 50.0 & 800 & 230 & 1 & 5.0
+MonsterObject1 & 50.0 & 800 & 280 & 1 & 5.0
+MonsterObject1 & 50.0 & 800 & 330 & 1 & 5.0
+
+MonsterObject4 & 55.0 & 800 & 30 & 1 & 5.0
+MonsterObject4 & 55.0 & 800 & 80 & 1 & 5.0
+MonsterObject4 & 55.0 & 800 & 130 & 1 & 5.0
+MonsterObject4 & 55.0 & 800 & 180 & 1 & 5.0
+MonsterObject4 & 55.0 & 800 & 230 & 1 & 5.0
+MonsterObject4 & 55.0 & 800 & 280 & 1 & 5.0
+MonsterObject4 & 55.0 & 800 & 330 & 1 & 5.0
+
+MonsterObject4 & 58.5 & 800 & 30 & 1 & 5.0
+MonsterObject4 & 58.5 & 800 & 80 & 1 & 5.0
+MonsterObject4 & 58.5 & 800 & 130 & 1 & 5.0
+MonsterObject4 & 58.5 & 800 & 180 & 1 & 5.0
+MonsterObject4 & 58.5 & 800 & 230 & 1 & 5.0
+MonsterObject4 & 58.5 & 800 & 280 & 1 & 5.0
+MonsterObject4 & 58.5 & 800 & 330 & 1 & 5.0
+
+MonsterObject2 & 64.0 & 800 & 215 & 1 & 5.0
+MonsterObject2 & 64.0 & 800 & 215 & 1 & 5.0
+MonsterObject2 & 64.0 & 800 & 215 & 1 & 5.0
+MonsterObject2 & 64.0 & 800 & 215 & 1 & 5.0
+MonsterObject2 & 64.0 & 800 & 215 & 1 & 5.0
+MonsterObject2 & 64.0 & 800 & 215 & 1 & 5.0
+MonsterObject2 & 64.0 & 800 & 215 & 1 & 5.0
+MonsterObject2 & 64.0 & 800 & 215 & 1 & 5.0
+MonsterObject2 & 64.0 & 800 & 215 & 1 & 5.0
+MonsterObject2 & 64.0 & 800 & 215 & 1 & 5.0
+MonsterObject2 & 64.0 & 800 & 215 & 1 & 5.0
+MonsterObject2 & 64.0 & 800 & 215 & 1 & 5.0
+MonsterObject2 & 64.0 & 800 & 215 & 1 & 5.0
+MonsterObject2 & 64.0 & 800 & 215 & 1 & 5.0
+MonsterObject2 & 64.0 & 800 & 215 & 1 & 5.0
+MonsterObject2 & 64.0 & 800 & 215 & 1 & 5.0
+MonsterObject2 & 64.0 & 800 & 215 & 1 & 5.0
+MonsterObject2 & 64.0 & 800 & 215 & 1 & 5.0
+MonsterObject2 & 64.0 & 800 & 215 & 1 & 5.0
+MonsterObject2 & 64.0 & 800 & 215 & 1 & 5.0
+MonsterObject2 & 64.0 & 800 & 215 & 1 & 5.0
+MonsterObject2 & 64.0 & 800 & 215 & 1 & 5.0
+MonsterObject2 & 64.0 & 800 & 215 & 1 & 5.0
+MonsterObject2 & 64.0 & 800 & 215 & 1 & 5.0
+MonsterObject2 & 64.0 & 800 & 215 & 1 & 5.0
+
+[Sounds] (nameSound & loop)
+Starcraft & 1
+rtype_theme & 1
+superiorfire0 & 0
+regularbeam2 & 0
+charge & 1
+superiorfire1 & 0
+superiorfire2 & 0
+superiorfire3 & 0
+superiorfire4 & 0
+superiorfire5 & 0
+blueshipexplosion & 0
+greenshipexplosion & 0
+redshipexplosion & 0
+yellowshipexplosion & 0
+monster1explosion & 0
+monster2explosion & 0
+monster3explosion & 0
+monster4explosion & 0
+monster5explosion & 0
+monster6explosion & 0
+monsterpowerupexplosion & 0
+insufficient & 0
+sas_ouverture & 0

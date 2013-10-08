@@ -1,0 +1,58 @@
+RFC 7000		    R-Type Protocol      	       July 2011
+
+4.3.4.1 Client
+
+   Size: 0
+   Type: RT_TYPE_ROOM
+   Transaction Type: RT_TT_REQUEST
+   Sub-Type: RT_SUB_ROOMS
+   Data: none
+
+           Size       T   TT    ST                Data
+    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+    |        0      | 1 | 0 |   2   |                             |
+    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+
+4.3.4.2 Server
+
+   Depending on the situation the server can reply one of the
+   following packets.
+
+   Size: Depending on the size of the data
+   Type: RT_TYPE_ROOM
+   Transaction Type: RT_TT_REPLY
+   Sub-Type: RT_SUB_ROOMS
+   Data: it will contain the list of the rooms name. The format is a
+   string in which each room’s name will be separated by the
+   character ‘\0’.
+
+           Size       T  TT    ST               Data
+    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+    | 254(bytes)max | 1 | 1 |   2   |/////////////////////////////|
+    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+
+4.3.5 Players
+
+   When a player wants the list of available players in a room he MUST
+   send this.
+
+4.3.5.1 Client
+
+   Size: Depending on the size of the data
+   Type: RT_TYPE_ROOM
+   Transaction Type: RT_TT_REQUEST
+   Sub-Type: RT_SUB_PLAYERS
+   Data: it will contain the room's name.
+
+           Size       T   TT    ST              Data
+    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+    | 254(bytes)max | 1 | 0 |   3   |/////////////////////////////|
+    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+
+4.3.5.2 Server
+
+   Depending on the situation the server can reply one of the following.
+
+
+
+Da Silva & Benramdhane					       [page 15]

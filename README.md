@@ -20,3 +20,13 @@ AbstractVM :
 
 Project done during Epitech (IT school)
 Create a VM for managing small instructions.
+
+Rtype :
+
+Project done during Epitech (IT school)
+Reproduce the famous shoot'em up R-Type but with 4 players
+
+Pong :
+
+Project for fun
+The first video game I made on Unity in order to learn physics, vectors, matrices in this engine

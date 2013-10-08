@@ -1,0 +1,58 @@
+RFC 7000		    R-Type Protocol      	       July 2011
+
+3.2.3 Object
+
+   All the following things described below are all considered as
+   object.
+
+3.2.3.1 Players
+
+  A player is a object which is controle by one of the player. It will
+  change of behavior by the several events emits by the different player.
+
+3.2.3.2 Ennemies
+
+   R-Type is not a pushover. Indeed, you will find in your way a horde
+   of ennemies who only want one thing: kill you and your friends.
+   You have two options to survive. Kill all the monsters you will
+   cross in your way or avoid their attacks by passing through the crowd.
+
+   Be carefull, a simple contact with an ennemy's bullet or this one
+   will kill you directly (see the part below this one on collison).
+
+3.2.3.3 Bullets
+
+   They should use their weapon to shoot their ennemies. A player may
+   enhance the power of the bullets by keeping the shoot's key pushed.
+   The more you do, the more the players weapon's power will increase.
+   Each bullet is unique and linked to a particular player.
+   The ennemy can shoot the player too with their own bullets.
+
+3.2.3.4 Bonus
+
+   A player can get bonuses. They can appear by killing ennemies or just
+   randomly in the middle of the game.
+
+3.2.4 Collision
+
+   A player is very vulnerable. A contact with an ennemy or with some
+   elements of the level (for example a space rock...) will kill him. A
+   client will be notified by the server when he will be touched by one
+   of those elements. You MUST be carefull!
+
+3.2.5 Scoring
+
+   R-Type is a shoot them up, a system of scoring is of course necessary
+   to add more competitivity between players and much more fun.
+
+   To get your score increased, you have to kill monsters or get the
+   bonuses on the map.
+
+3.2.6 Game Over
+
+   Like it has been explain previously, a simple contact with the map, an
+   ennemy or his bullets consume one life. When all the players have no
+   life left, the game is over.
+
+
+Benramdhane & Da Silva						[Page 9]

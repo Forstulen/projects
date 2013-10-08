@@ -1,0 +1,59 @@
+RFC 7000		    R-Type Protocol      	       July 2011
+
+3.1.3.10 Start
+
+   If the client has received all the information about the game, he
+   MUST notify the server that he is ready to start the game. If he
+   does not notify the server, the game will never start.
+
+   In fact, if the server does not receive all the responses from the
+   different players, it will never launch the game. The clients will be
+   informed of the beginning of the game when all of them are ready to
+   start.
+
+3.1.4 Example
+
+   This scheme is an example that show a classic use of a player before a
+   game.
+                       Client                  Server
+                  |                                     |
+                  |         Connect + Login             |
+                  | >>------------------------------->> |
+                  |                                     |
+                  |         Send True Login             |
+                  | <<-------------------------------<< |
+                  |                                     |
+                  |        Send Rooms Listing           |
+                  | >>------------------------------->> |
+                  |                                     |
+                  |      Send Rooms Informations        |
+                  | <<-------------------------------<< |
+                  |                                     |
+                  |         Send player's list          |
+                  | >>------------------------------->> |
+                  |                                     |
+                  |    Send Join Room                   |
+                  | >>---------------+                  |
+                  |                  |                  |
+                  |          Send player's list         |
+                  | <<---------------(---------------<< |
+                  |                  |                  |
+                  |                  +--------------->> |
+                  |                                     |
+                  |          Send Success Join          |
+                  | <<-------------------------------<< |
+                  |                                     |
+                  |          Send Ready Status          |
+                  | >>------------------------------->> |
+                  |                                     |
+                  |         Send Acknowledgment         |
+                  | <<-------------------------------<< |
+                  |                                     |
+                  |          Send player info           |
+                  | <<-------------------------------<< |
+
+
+
+
+
+Benramdhane & Da Silva						[Page 7]

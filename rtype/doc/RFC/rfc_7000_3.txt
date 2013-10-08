@@ -1,0 +1,58 @@
+RFC 7000		    R-Type Protocol      	       July 2011
+
+3.1.3 Room
+
+   The rooms are the heart of the game. These are the different
+   actions that can do a client.
+
+3.1.3.1 Join
+
+   A client MAY join a room only if there is enough place. To
+   remind you, a room MUST NOT accept more than four clients. He can
+   try to go into a room, the server will reply if he can join this room.
+
+3.1.3.2 Leave
+
+   A client MAY leave a room only if not everybody is in state ready
+   (for more information about the state, see the next part).
+
+3.1.3.3 Rooms
+
+    A client can ask to the server to list the rooms available. He will
+    receive the list of the rooms.
+
+3.1.3.4 Players
+
+    A client can get the list of the players who are in a room.
+
+3.1.3.5 Ready
+
+   Every client in a room is linked to a state. You have two states:
+   ready and not ready. If everyone in the room is ready, then the game
+   get started. When a game is about to begin, all clients cannot change
+   their states.
+
+3.1.3.6 Player info
+
+   Every objects, the players and the bullets are unique. They are all
+   associated with a unique ID by the server to distinguished each of
+   them. The port, on which they will bind their UDP socket, will be
+   sent with the ID of each client.
+
+   For each game, ids from 0 to 3 are reserved to the four players
+   in game. It is the first information sent by the server to the client
+   when every players in the room is ready.
+
+3.1.3.7 Files
+
+   Files are required to play the game in the client side. To be sure
+   that it has them the server will ask him and if not send them over to
+   him.
+
+
+
+
+
+
+
+Benramdhane & Da Silva						[Page 6]

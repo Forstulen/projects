@@ -1,0 +1,58 @@
+RFC 7000		    R-Type Protocol      	       July 2011
+
+4.5.3.2 Server
+
+   Size: 21 bytes
+   Type: RT_TYPE_GAME
+   Transaction Type: RT_TT_MODIFICATION
+   Sub-Type: RT_SUB_BULLET
+   Data: it will contain the timestamp (4 bytes), local object's id
+   (4 bytes), the final's id (4 bytes), the position x (4 bytes) and y
+   (4 bytes), direction (1 byte).
+
+   	   Size       T   TT    ST      Data (with Timestamp)
+    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+    |       21      | 2 | 1 |   2   |/////////////////////////////|
+    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+
+4.5.4 Scoring
+
+   The server will update the score of a player by sending this packet.
+
+4.5.4.1 Server
+
+   Size: 8 bytes
+   Type: RT_TYPE_GAME
+   Transaction Type: RT_TT_MODIFICATION
+   Sub-Type: RT_SUB_SCORE
+   Data: ID(4 bytes) Score(4 bytes)
+
+	   Size       T   TT    ST               Data
+    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+    |       8       | 2 | 1 |   //  |////////                     |
+    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+
+4.5.5 Game Over
+
+   If everyone lost all their life, they will receive a packet notifying
+   the end of the game. To make sure that the client will receive the
+   packet this one will be sent by TCP over IP.
+
+4.5.5.1 Server
+
+   Size: 0
+   Type: RT_TYPE_GAME
+   Transaction Type: RT_TT_DESTRUCTION
+   Sub-Type: RT_SUB_GAMEOVER
+   Data: none
+
+	   Size       T   TT    ST               Data
+    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+    |       0       | 2 | 2 |   4   |                             |
+    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+
+
+
+
+
+Da Silva & Benramdhane					       [page 23]

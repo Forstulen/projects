@@ -1,0 +1,150 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\begin{document}
+\title{Bilan des réunions}
+\author{
+    Soufien Benramdhane\\
+    Alexandre Da-silva\\
+    Romain Tholimet\\
+    Johannick Renaud\\
+    Antoine Piellard\\
+    Mathieu Berbegal
+}
+\maketitle
+\newpage
+\section{Première Réunion}
+Pendant cette réunion, on a d'abord découpé le projet en plusieurs phases afin
+de s'organiser un minimum. Ensuite, on a essayé de voir ce qu'un client et
+serveur R-Type pourraient contenir.
+\subsection{Les phases du projet}
+\subsubsection{Phase 1 (Durée : 1 Semaine)}
+\begin{itemize}
+  \item{Protocole binaire et conception. À finir avant le suivi !}
+\end{itemize}
+\subsubsection{Phase 2 (Durée : 1 Semaine)}
+\begin{itemize}
+  \item{Affichage statique : On voit les les décors et les monstres fixes sans
+  pattern précis,}
+  \item{Connexion des joueurs avec gestion des rooms (côté serveur),}
+  \item{Gestion des événements clavier.}
+\end{itemize}
+\subsubsection{Phase 3 (Durée : 2 Semaines)}
+\begin{itemize}
+  \item{Génération des monstres aléatoire,}
+  \item{Gestion des patterns,}
+  \item{Gestion et scrolling des starfields,}
+  \item{Gestion des collisions,}
+  \item{Gestion des maps.}
+\end{itemize}
+\subsubsection{Phase 4 (Durée : 1 Semaine)}
+\begin{itemize}
+  \item{Phase de debug et de test,}
+  \item{Commencement et/ou finition de la GUI,}
+  \item{Créer les levels comme dans R-Type,}
+  \item{Faire tout comme dans R-Type.}
+\end{itemize}
+\subsubsection{Apparté}
+Le but c'est de respecter au maximum ces phases. On va bien sûr parfois aller
+plus vite, parfois moins.
+\newpage
+\subsection{Vision globale}
+\begin{tabular}{| c | c |}
+  \hline
+  Client & Serveur \\ \hline
+  SFML & Quadtree \\ \hline
+  Core (Boucle de jeu) & Core \\ \hline
+  Abstraction Réseau TCP et UDP & Abstraction Réseau TCP et UDP \\ \hline
+  Gestion des animations & Abstraction Thread + Gestion du debug \\ \hline
+  GUI (Menu) & Gestion événement \\ \hline
+  Gestion des logs & Gestion des rooms \\ \hline
+  Abstraction Son, Image, Thread & TChat \\ \hline
+  Banque Multimédia + Factory & Fichiers de données \\ \hline
+  & Gestion des joueurs (Bonus, vie, etc...) \\ \hline
+  & Gestion du temps, vitesse \\ \hline
+\end{tabular}
+\subsection{Les questions qu'on se posait}
+\begin{itemize}
+  \item{Est-ce que l'on envoit à chaque fois toutes les positions ? (Du coup, on
+      a décidé que non)}
+  \item{Comprendre le fonctionnement du quadtree (on a décidé qu'on en faisait
+      pas.)}
+  \item{Doit-on mettre un système de room?(On sait qu'il en faut un)}
+\end{itemize}
+\newpage
+\section{Deuxième Réunion}
+Pendant cette réunion, on a définit les bases du protocoles et établit quelques
+énumrations.
+\subsection{Formattage d'un paquet}
+\begin{tabular}{| c | c | c | c | c | c |}
+  \hline
+  Nbr de bit & 8 & 2 & 2 & 4 & 253 octets \\ \hline
+  Parties & Size & Type & TT (transaction type) & Sous-type & Data \\ \hline
+\end{tabular}
+\subsection{Le TT}
+\begin{itemize}
+  \item{REQUEST}
+  \item{ERROR}
+  \item{REPLY}
+  \item{ACK}
+\end{itemize}
+\subsection{Les types}
+\subsubsection{Connection 0x0}
+\begin{itemize}
+  \item{AUTH}
+  \item{DISC}
+  \item{ALIVE}
+\end{itemize}
+\subsubsection{Room 0x1}
+\begin{itemize}
+  \item{PLAYER}
+  \item{JOIN}
+  \item{LEAVE}
+  \item{LIST}
+\end{itemize}
+\subsubsection{Game 0x2}
+\begin{itemize}
+  \item{PLAYER}
+  \item{MAP}
+  \item{STARFIELD}
+  \item{ENEMY}
+\end{itemize}
+\subsection{Apparté}
+Pendant cette réunion, on a décidé :
+\begin{itemize}
+  \item{Que pour la gestion des collisions on
+  abandonne les quad trees et qu'on découpe la
+    map sans faire d'arbre,}
+  \item{Qu'on envoit la map à chaque début de
+  level,}
+  \item{Que toutes les rooms sont crées à
+  l'avance,}
+  \item{Qu'on peut voir le nombre de joueurs
+  dans les rooms mais pas leur login etc...
+  Pour les voir, il faut cliquer ou passer
+  dessus,}
+  \item{Que dans le champ Data pour l'envoi
+  d'une map on mette 1 char pour le numéro
+  du paquet, 1 char pour la ligne
+  correspondante et le reste remplit des
+  données.}
+\end{itemize}
+\section{Norme}
+Voici les règles de normes établies avec le groupe :
+\subsection{Dans le code}
+\begin{itemize}
+\item{Pas de header emacs.}
+\item{Les méthodes : getMembers.}
+\item{Les interfaces : IClass / Les abstraites : AClass.}
+\item{Les variables membres : nomDeVariable\_}
+\item{Extension des fichiers headers : .hpp}
+\item{Les variables container : nameList, roomVector ou utilisation de typedef}
+\end{itemize}
+\subsection{Dans les commits}
+\begin{verbatim}
+Message ::= '[' Part ']' Verb msg '.'
+Part	   ::= ['A' - 'Z']['a' - 'z' | '0' - '9' | '_']
+Verb	   ::= <<verb in past (je sais c'est pas de la BNF mais fuck! =3)>>
+msg	   ::= classic message
+\end{verbatim}
+\end{document}

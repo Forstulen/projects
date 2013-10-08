@@ -1,0 +1,58 @@
+RFC 7000		    R-Type Protocol      	       July 2011
+
+3.2.7 Postlude
+
+   When the boss dies that means that the players have won and so they
+   can load the next level.
+
+4.  PACKET DETAILS
+
+   On the following pages are descriptions of each packet recognized by
+   the server and client. All packets described in this section
+   must be implemented by any server for this protocol.
+
+   The server to which a client is connected is required to handle the
+   complete packet, returning any appropriate errors.  If the server
+   encounters a fatal error while handling a message, an error must be
+   sent back. A fatal error may be considered to be an incorrect packet.
+
+4.1 Header possibilities
+
+   Herein you will find a description of all settings you can use for
+   the packet's header.
+
+4.1.2 Type
+
+   Type MUST be one of the following:
+
+   RT_TYPE_CONNECTION (0)
+   RT_TYPE_ROOM (1)
+   RT_TYPE_GAME (2).
+
+4.1.3 Transaction Type
+
+   The transaction type (TT) MUST be one of the following:
+
+   RT_TT_REQUEST (0)	     	      RT_TT_CREATION (0)
+   RT_TT_REPLY (1)		      RT_TT_MODIFICATION (1)
+   RT_TT_ACK (2)		      RT_TT_DESTRUCTION (2)
+   RT_TT_ERROR (3)
+
+4.1.4 Sub-type
+
+   Each Type have their own sub-types.
+
+4.1.4.1 Connection
+
+   CONNECTION type is REQUIRED to have at least those sub-types:
+
+   RT_SUB_AUTH (0)
+   RT_SUB_DISC (1)
+   RT_SUB_ALIVE (2)
+
+
+
+
+
+
+Da Silva & Benramdhane					       [page 10]

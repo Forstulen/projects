@@ -1,0 +1,57 @@
+RFC 7000		    R-Type Protocol      	       July 2011
+
+           Size       T   TT    ST              Data
+    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+    |       0       | 1 | 1 |   9   |                             |
+    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+    
+4.3.8.2 Client
+
+   If the client has already the file it MUST send this.
+
+   Size: Depending on the size of the data
+   Type: RT_TYPE_ROOM
+   Transaction Type: RT_TT_DESTRUCTION
+   Sub-Type: RT_SUB_FILE
+   Data: none
+
+           Size       T   TT    ST              Data
+    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+    |       0       | 1 | 1 |   9   |                             |
+    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+
+   if not, here is what it MUST send.
+
+   Size: Depending on the size of the data
+   Type: RT_TYPE_ROOM
+   Transaction Type: RT_TT_CREATION
+   Sub-Type: RT_SUB_FILE
+   Data: none
+
+           Size       T   TT    ST              Data
+    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+    |       0       | 1 | 1 |   9   |                             |
+    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+
+4.3.9 Start
+
+   When a player has his id, loaded the map and the starfield. He must
+   send the following to say that he is ready to play.
+
+4.3.9.1 Client
+
+   Size: 0
+   Type: RT_TYPE_ROOM
+   Transaction Type: RT_TT_REQUEST
+   Sub-Type: RT_SUB_START
+   Data: none
+
+	   Size       T   TT    ST                Data
+    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+    |       0       | 1 | 0 |   8   |                             |
+    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+
+
+
+
+Da Silva & Benramdhane					       [page 19]

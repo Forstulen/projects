@@ -1,0 +1,58 @@
+RFC 7000		    R-Type Protocol      	       July 2011
+
+4.3.3.1 Client
+
+   Size: Depending on the size of the data
+   Type: RT_TYPE_ROOM
+   Transaction Type: RT_TT_REQUEST
+   Sub-Type: RT_SUB_LEAVE
+   Data: it will contain the name (253 bytes max) of the room
+
+           Size     T   TT    ST                Data
+    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+    |254(bytes)max| 1 | 0 |   1   |///////////////////////////////|
+    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+
+4.3.3.1 Server
+
+   Depending on the situation the server can reply one of the
+   following packets.
+
+4.3.3.1.1 Success
+
+   Size: 0
+   Type: RT_TYPE_ROOM
+   Transaction Type: RT_TT_ACK
+   Sub-Type: RT_SUB_LEAVE
+   Data: none
+
+           Size       T   TT    ST                Data
+    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+    |       0       | 1 | 2 |   1   |				  |
+    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+
+4.3.3.1.2 Error
+
+   Size: Depending on the size of the data
+   Type: RT_TYPE_ROOM
+   Transaction Type: RT_TT_ERROR
+   Sub-Type: RT_SUB_LEAVE
+   Data: it will contain one of the following errors:
+   ‘Not an existing room.’
+   ‘You’re not currently in a room.’
+
+           Size       T   TT    ST                Data
+    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+    | 254(bytes)max | 1 | 3 |   1   |/////////////////////////////|
+    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+
+4.3.4 Rooms
+
+   When a player wants the list of available rooms he MUST send this.
+
+
+
+
+
+
+Da Silva & Benramdhane					       [page 14]

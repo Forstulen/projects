@@ -1,0 +1,39 @@
+Compte rendu 2: (réunion 5)
+
+Jo:
+
+Thread => Mutex / Thread / CondVar (Windows et Linux)
+       	  ScopedLock
+
+	  Safequeue<Value, Mutex> 
+
+Game   => Player => TCPSocket
+       	  	    UDPSocket
+		    level_
+		    beam_
+       => GameObjectFactory => GameObject = > Position + AnimationFunctor
+       => GameTask => Functor + GameObject + Time
+       => RoomManager => startRoom
+       	  	      	 stopRoom
+       => Room => SafeQueue<String ...> messages
+       	       	  std::list<Player>
+		  Game
+			=> : Map
+			=> : Thread pool
+	=> AssetManager avec fichier de conf et gestion des extensions
+	   		pour les son et images	
+
+<<Les interfaces montrent seulement les besoins.
+      Elles sont un peu useless avec les policies.>>
+
+Mathieu:
+
+<<Code avec des typedefs>>
+
+<<Utiliser un fichier de conf pour connaitre la taille des images pour
+	   gérer les collisions.>>
+romain :
+
+<<UDP redefinie toutes ses autres methodes avec un message d'erreur, no need.
+      On a besoin que du bind.>>
+      

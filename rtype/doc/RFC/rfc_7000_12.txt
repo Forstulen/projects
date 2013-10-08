@@ -1,0 +1,58 @@
+RFC 7000		    R-Type Protocol      	       July 2011
+
+4.3.8.1 Server
+
+   The server MUST ask to the client if he has the file needed by
+   sending this.
+
+   Size: Depending on the size of the data
+   Type: RT_TYPE_ROOM
+   Transaction Type: RT_TT_CREATE
+   Sub-Type: RT_SUB_FILE
+   Data: it will contain the file size (4 bytes) and the file name.
+
+           Size       T   TT    ST              Data
+    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+    |254(bytes)max  | 1 | 0 |   9   |/////////////////////////////|
+    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+
+   If he has a positive answer, he will continue by the sending the
+   content with this:
+
+   Size: Depending on the size of the data
+   Type: RT_TYPE_ROOM
+   Transaction Type: RT_TT_MODIFICATION
+   Sub-Type: RT_SUB_FILE
+   Data: it will contain the content of the file.
+
+           Size       T   TT    ST              Data
+    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+    |254(bytes)max  | 1 | 1 |   9   |/////////////////////////////|
+    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+
+   The below packet announced the end of transfer.
+
+   Size: 0
+   Type: RT_TYPE_ROOM
+   Transaction Type: RT_TT_MODIFICATION
+   Sub-Type: RT_SUB_FILE
+   Data: none
+
+           Size       T   TT    ST              Data
+    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+    |       0       | 1 | 1 |   9   |                             |
+    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+
+   If the client has already the file, the server will send the next
+   one. After the server has sent all the needed files it MUST send
+   this to notify the end of the file transfer phase.
+
+   Size: 0
+   Type: RT_TYPE_ROOM
+   Transaction Type: RT_TT_DESTRUCTION
+   Sub-Type: RT_SUB_FILE
+   Data: none
+
+
+
+Da Silva & Benramdhane					       [page 18]

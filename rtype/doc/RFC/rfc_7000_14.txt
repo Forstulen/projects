@@ -1,0 +1,58 @@
+RFC 7000		    R-Type Protocol      	       July 2011
+
+4.3.9.2 Server
+
+   When the players are ready to play, the server MUST send this to them.
+
+   Size: 0
+   Type: RT_TYPE_ROOM
+   Transaction Type: RT_TT_ACK
+   Sub-Type: RT_SUB_START
+   Data: none
+
+   	   Size       T   TT    ST                Data
+    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+    |       0       | 1 | 2 |   8   |                             |
+    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+
+4.4 Prelude
+
+   Here the server MUST notify the creation of the player's objects in
+   the game to all the clients.
+   (See Object 4.5.2).
+
+4.5 Game operations
+
+   This part will describe the several packets exchange between the
+   client and the server during a game. Note that from now on all the
+   packets  be sent using UDP protocol. To deal with possibly lost
+   of a packet the first 4 bytes of the data will be the timestamp of the
+   packet.
+
+4.5.1 Events
+
+   Each of those packets will synchronize the players events with the
+   server. The player will tell to the server what he is doing and
+   then the server will confirm it to him.
+
+4.5.1.1 Movement
+
+   When the player goes up, down, left or right the client MUST send
+   this.
+
+4.5.1.1.1 Client
+
+   Size: 9 bytes.
+   Type: RT_TYPE_GAME
+   Transaction Type: RT_TT_MODIFICATION
+   Sub-Type: RT_SUB_EVENT
+   Data: it will contain the timestamp (4 bytes), the player's id 
+   (4 bytes), the event enum (1 byte).
+
+	   Size       T   TT    ST        Data (with Timestamp)
+    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+    |       9       | 2 | 1 |   0   |/////////////////////////////|
+    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+
+
+Da Silva & Benramdhane					       [page 20]
