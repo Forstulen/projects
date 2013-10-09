@@ -14,7 +14,7 @@
 #include		<fstream>
 #include		<iostream>
 #include		<map>
-#include		<fmodex/fmod.hpp>
+#include		<fmod.hpp>
 #include		"ACore.hh"
 #include		"Snake.hh"
 #include		"Grid.hh"

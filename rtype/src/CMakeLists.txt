@@ -20,8 +20,3 @@ add_subdirectory		(Client)
 
 set				(PROJECT_TYPE		Libraries)
 add_subdirectory		(Common)
-
-#				Build: rtype-editor (see CMakeLists.txt in Editor folder)
-
-set				(PROJECT_TYPE		Editor)
-add_subdirectory		(Editor)

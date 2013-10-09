@@ -30,3 +30,8 @@ Pong :
 
 Project for fun
 The first video game I made on Unity in order to learn physics, vectors, matrices in this engine
+
+PIL_Tessallation :
+
+Project for fun
+PIL with python, simple algorithm of picture tessallation

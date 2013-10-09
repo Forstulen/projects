@@ -29,7 +29,7 @@ SRCS			=	main.cpp		\
 
 OBJS			=	$(SRCS:.cpp=.o)
 
-LDXFLAGS		=	-ldl -lfmodex -lX11
+LDXFLAGS		=	-ldl -lfmod
 
 CXFLAGS			+=	-W -Wall -Wextra
 

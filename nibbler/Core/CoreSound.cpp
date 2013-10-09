@@ -37,24 +37,27 @@ void			snake::Core::initSound(void)
 
   this->_system->createSound(ss5.str().c_str(), FMOD_SOFTWARE | FMOD_2D | FMOD_CREATESTREAM | FMOD_LOOP_NORMAL, 0, &this->_ambiance);
 
-  this->_system->playSound(FMOD_CHANNEL_FREE, this->_ambiance, false, NULL);
+  FMOD::Channel *channel = NULL;
+  this->_system->playSound(this->_ambiance, NULL, false, &channel);
 }
 
 void			snake::Core::playSound(int ret)
 {
+
+  FMOD::Channel *channel = NULL;
   switch (ret)
     {
     case -1:
-      this->_system->playSound(FMOD_CHANNEL_FREE, this->_dying, false, NULL);
+      this->_system->playSound(this->_dying, NULL, false, &channel);
       break ;
     case 1:
-      this->_system->playSound(FMOD_CHANNEL_FREE, this->_apple, false, NULL);
+      this->_system->playSound(this->_apple, NULL, false, &channel);
       break ;
     case 2:
-      this->_system->playSound(FMOD_CHANNEL_FREE, this->_mickey, false, NULL);
+      this->_system->playSound(this->_mickey, NULL, false, &channel);
       break ;
     case 3:
-      this->_system->playSound(FMOD_CHANNEL_FREE, this->_caca, false, NULL);
+      this->_system->playSound(this->_caca, NULL, false, &channel);
       break ;
     }
 }

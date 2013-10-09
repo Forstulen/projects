@@ -8,7 +8,7 @@
 // Last update Sun Mar 20 19:38:44 2011 romain tholimet
 //
 
-#include		<X11/Xlib.h>
+//#include		<Xlib.h>
 #include		"Parser.hh"
 
 void			Parser::isNum(std::string const & num,
@@ -27,8 +27,8 @@ void			Parser::isNum(std::string const & num,
 //On teste l'existence de la connetion avec le serveur X11 pour eviter le SEGFAULT
 void		Parser::checkX11Server(void)
 {
-  if (!XOpenDisplay(NULL))
-    throw nibblerException("Cannot create a Window SFML !");
+  //  if (!XOpenDisplay(NULL))
+  //throw nibblerException("Cannot create a Window SFML !");
 }
 
 Parser::Parser(std::string const & x,
