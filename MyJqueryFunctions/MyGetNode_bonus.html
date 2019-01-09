@@ -1,0 +1,81 @@
+<html>
+	<body>
+		<h1>TITRE</h1>
+		<p id="p1"class="paragraph">LOL</p>
+		<p id="p2"class="paragraph">LOL2</p>
+		<p id="p3"class="subtitle">MDR</p>
+		<section id="s1">PTDR</p>
+	</body>
+
+	<script type="text/javascript">
+		//FUNCTION $()
+		function $(param) {
+			//Creation of a lambda function to use the recursivity inside our function
+			var goThroughTree = function(node, func, string, nodes) {
+				//Apply the matching function to the current node
+				func(node, string, nodes);
+				node = node.firstChild;
+    			while (node) {
+        			goThroughTree(node, func, string, nodes);
+        			node = node.nextSibling;
+    			}
+			};
+
+			//The array of the matching nodes
+			var nodes = [];
+
+			//Check if the parameter is a string
+			if (param != null && typeof(param) == "string" && param.length >= 1) {
+				var func = null;
+				var string = "";
+				//Check the first character to know if it's whether a class, an id or a name
+				switch (param[0]) {
+					case '.':
+						//Must check if the character is not followed by something
+						if (param.length < 2)
+							break;
+						string = param.substring(1, param.length);
+						//lambda function to use in our recursive function to test on each node
+						func = function(node, param, nodes) {
+							if (node.classList != null && node.classList.contains(param))
+								nodes.push(node);
+						};
+						break;
+					case '#':
+						//Must check if the character is not followed by something
+						if (param.length < 2)
+							break;
+						string = param.substring(1, param.length);
+						//lambda function to use in our recursive function to test on each node
+						func = function(node, param, nodes) {
+							if (node.id != null && node.id == param)
+								nodes.push(node);
+						};
+						break;
+					default:
+						string = param.toUpperCase();
+						//lambda function to use in our recursive function to test on each node
+						func = function(node, param, nodes) {
+							if (node.tagName != null && node.tagName == param)
+								nodes.push(node);
+						};
+						break;
+				}
+				if (string != "")
+					//Call the recursive function with the first node (document.body)
+					goThroughTree(document.body, func, string, nodes);
+			}
+
+			return nodes;
+		} 
+		//*******************************************************
+
+		//TEST
+		alert($("#p2")[0].innerHTML);
+		alert($(".subtitle")[0].innerHTML);
+		$(".paragraph").forEach(function (element) { alert(element.innerHTML); });
+		alert($("h1")[0].innerHTML);
+		//*********************************************
+
+	</script>
+</html>
